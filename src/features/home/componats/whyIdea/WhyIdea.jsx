@@ -3,25 +3,25 @@ import './WhyIdea.css';
 const WhyIdea = () => {
   const features = [
     {
-      img: '/public/imges/Overlay.png',
+      img: '/imges/Overlay.png',
       title: 'Instant Delivery',
       description: 'Get your top-ups delivered in seconds'
     },
     {
-      img: '/public/imges/Overlay (1).png',
+      img: '/imges/Overlay (1).png',
       title: 'Competitive Pricing',
       description: 'Best prices in the market guaranteed'
     },
     {
-      img: '/public/imges/Overlay (2).png',
+      img: '/imges/Overlay (2).png',
       title: 'Secure Payments',
       description: '100% safe and encrypted transactions'
     },
     {
-      img: '/public/imges/Overlay (3).png',
+      img: '/imges/Overlay (3).png',
       title: 'Direct Support',
       description: '24/7 customer support via WhatsApp'
-    }
+    } 
   ];
 
   return (

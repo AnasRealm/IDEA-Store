@@ -22,7 +22,7 @@ const Navbar = () => {
 
           <button className="navbar-profile" onClick={handleProfileClick}>
             <img
-              src="/public/imges/user.png"
+              src="/imges/user.png"
               alt="Profile"
               className="profile-icon"
             />

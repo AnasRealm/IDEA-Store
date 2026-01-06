@@ -16,21 +16,21 @@ const Games = () => {
       title: "Crypto Trader Pro",
       developer: "TradingStudio",
       price: "$29.99",
-      image: "/public/imges/about.png",
+      image: "/imges/about.png",
     },
     {
       id: 2,
       title: "Stock Market Simulator",
       developer: "FinanceGames",
       price: "$19.99",
-      image: "/public/imges/tr1.png",
+      image: "/imges/tr1.png",
     },
     {
       id: 3,
       title: "Forex Master",
       developer: "CurrencyPro",
       price: "$39.99",
-      image: "/public/imges/tr2.png",
+      image: "/imges/tr2.png",
     },
   ];
 
@@ -41,21 +41,21 @@ const Games = () => {
       title: "Adventure Quest",
       developer: "GameStudio",
       price: "$24.99",
-      image: "/public/imges/tr3.png",
+      image: "/imges/tr3.png",
     },
     {
       id: 5,
       title: "Racing Championship",
       developer: "SpeedGames",
       price: "$34.99",
-      image: "/public/imges/tr4.png",
+      image: "/imges/tr4.png",
     },
     {
       id: 6,
       title: "Strategy Empire",
       developer: "WarGames",
       price: "$44.99",
-      image: "/public/imges/games.png",
+      image: "/imges/games.png",
     },
   ];
 

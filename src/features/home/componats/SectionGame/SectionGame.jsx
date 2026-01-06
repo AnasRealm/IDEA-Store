@@ -6,7 +6,7 @@ const SectionGame = () => {
       <div className="SectionGame-container">
         <div className="game-content">
           <div className="game-image">
-            <img src="/public/imges/image 54.png" alt="Game Character" />
+            <img src="/imges/image 54.png" alt="Game Character" />
           </div>
           <div className="game-text">
             <h2>UNLEASH YOUR <br /> POWER. CONTROL <br /> THE GAME.</h2>
