@@ -1,0 +1,136 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lalezar&display=swap');
+
+.hero {
+    min-height: 100vh;
+    background: linear-gradient(139.98deg, #003E38 10.69%, #003E38 20.26%, #014E46 30.76%, #00766A 40.02%, rgba(0, 78, 70, 0.941257) 54.12%, rgba(3, 81, 73, 0.952228) 55.88%, rgba(0, 62, 56, 0.983651) 78.08%, #002924 83.04%);
+    display: flex;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.hero-container {
+    max-width: 1500px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: 4rem;
+    padding: 0 2rem;
+    margin-top: 80px;
+}
+
+.hero-content {
+    color: white;
+    width: 700px;
+    height: 415px;
+}
+
+.hero-title {
+    font-family: Lato;
+    font-weight: 700;
+    font-size: 70px;
+    line-height: 111.00000000000001%;
+    letter-spacing: 6px;
+    text-transform: uppercase;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+    margin-bottom: 20px;
+}
+
+.hero-description {
+    font-family: Lato;
+    font-size: 19px;
+    line-height: 200%;
+    letter-spacing: 1px;
+    font-style: regular;
+}
+
+.hero-buttons {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+    margin-top: 60px;
+}
+
+.btn-primary {
+    width: 235px;
+    height: 75px;
+    background: white;
+    color: #067D71;
+    border: none;
+    padding: 1rem 2rem;
+    border-radius: 8px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-family: Lalezar;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 111.00000000000001%;
+    letter-spacing: 1px;
+    vertical-align: middle;
+    text-transform: uppercase;
+}
+
+.btn-primary:hover {
+    background: #f0f0f0;
+    transform: translateY(-2px);
+}
+
+.btn-secondary {
+    width: 235px;
+    height: 75px;
+    background: transparent;
+    color: white;
+    border: 1px solid white;
+    padding: 1rem 2rem;
+    border-radius: 8px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-family: Lato;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 111.00000000000001%;
+    letter-spacing: 1px;
+    vertical-align: middle;
+    text-transform: uppercase;
+
+}
+
+.btn-secondary:hover {
+    background-color: #00766A;
+  
+    transform: translateY(-2px);
+}
+
+.hero-image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero-image img {
+    max-width: 100%;
+    height: auto;
+    width: 625px;
+    height: 636px;
+    filter: drop-shadow(0 10px 30px rgba(0, 0, 0, 0.3));
+}
+
+@media (max-width: 768px) {
+    .hero-container {
+        grid-template-columns: 1fr;
+        text-align: center;
+        gap: 2rem;
+    }
+
+    .hero-title {
+        font-size: 2.5rem;
+    }
+
+    .hero-buttons {
+        justify-content: center;
+    }
+}

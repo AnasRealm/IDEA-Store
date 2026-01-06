@@ -1,0 +1,323 @@
+.games-page {
+  padding: 80px 0;
+  background: linear-gradient(139.98deg, #003E38 10.69%, #003E38 20.26%, #014E46 30.76%, #00766A 40.02%, rgba(0, 78, 70, 0.941257) 54.12%, rgba(3, 81, 73, 0.952228) 55.88%, rgba(0, 62, 56, 0.983651) 78.08%, #002924 83.04%);
+  min-height: 100vh;
+}
+
+.games-search {
+  max-width: 1200px;
+  margin: 0 auto 60px auto;
+  padding: 0 20px;
+}
+
+.search-input {
+  width: 100%;
+  padding: 15px 20px;
+  background: rgba(255, 255, 255, 0.1);
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  border-radius: 25px;
+  color: white;
+  font-size: 16px;
+  outline: none;
+  transition: border-color 0.3s ease;
+  margin-top: 40px;
+}
+
+.search-input::placeholder {
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.search-input:focus {
+  border-color: #00766A;
+}
+
+.trading-games-section,
+.all-games-section {
+  max-width: 1200px;
+  margin: 0 auto 80px auto;
+  padding: 0 20px;
+}
+
+.section-title {
+  font-family: Lato;
+  font-weight: 600;
+  font-size: 48px;
+  line-height: 117%;
+  letter-spacing: 1px;
+  text-align: center;
+  text-transform: uppercase;
+  color: white;
+  margin-bottom: 40px;
+}
+
+.games-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 30px;
+}
+
+.game-card {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 15px;
+  overflow: hidden;
+  transition: transform 0.3s ease;
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  cursor: pointer;
+}
+
+.game-card:hover {
+  transform: translateY(-10px);
+}
+
+.game-card__image {
+  width: 100%;
+  height: 200px;
+  overflow: hidden;
+}
+
+.game-card__image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.game-card__info {
+  padding: 20px;
+}
+
+.game-card__title {
+  font-family: Lato;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 111%;
+  letter-spacing: 3.5%;
+  text-transform: capitalize;
+  color: white;
+  margin-bottom: 10px;
+}
+
+.game-card__developer {
+  font-family: Lato;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 111%;
+  letter-spacing: 3.5%;
+  text-transform: capitalize;
+  color: #FFFFFF99;
+  margin-bottom: 15px;
+}
+
+.game-card__price {
+  color: #FFDD15;
+  padding: 8px 16px;
+  border-radius: 20px;
+  font-weight: bold;
+  font-size: 20px;
+}
+
+@media (max-width: 768px) {
+  .games-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .section-title {
+    font-size: 32px;
+  }
+
+  .search-input {
+    font-size: 14px;
+  }
+}
+
+.popup-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.8);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.popup {
+  background: linear-gradient(180.22deg, #063833 21.34%, #0C3430 36.81%, #0B3D37 50.39%, #0A4741 67.37%, #094740 83.59%, #095C53 99.81%);
+
+  border-radius: 20px;
+  width: 500px;
+  max-width: 90vw;
+  overflow: hidden;
+}
+
+.popup__image {
+  width: 100%;
+  height: 250px;
+}
+
+.popup__image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.popup__content {
+  padding: 30px;
+}
+
+.popup__title {
+  color: white;
+  font-size: 28px;
+  font-weight: bold;
+  margin-bottom: 25px;
+}
+
+.popup__section {
+  margin-bottom: 20px;
+}
+
+.popup__section label {
+  color: white;
+  display: block;
+  margin-bottom: 8px;
+  font-size: 16px;
+}
+
+.popup__select {
+  width: 100%;
+  padding: 12px;
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 8px;
+  color: white;
+  font-size: 14px;
+}
+
+.popup__input {
+  width: 100%;
+  padding: 12px;
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 8px;
+  color: white;
+  font-size: 14px;
+  box-sizing: border-box;
+}
+
+.popup__input::placeholder {
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.popup__input:focus {
+  outline: none;
+  border-color: #00766A;
+}
+
+.popup__total {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 25px 0;
+  padding: 15px 0;
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.popup__total span:first-child {
+  color: white;
+  font-size: 16px;
+}
+
+.popup__price {
+  color: #FFDD15;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.popup__buy-btn {
+  width: 100%;
+  padding: 15px;
+  background: #00766A;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  font-size: 18px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.popup__buy-btn:hover {
+  background: #005a52;
+}
+
+.login-prompt-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.8);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1001;
+}
+
+.login-prompt {
+  background: linear-gradient(180.22deg, #063833 21.34%, #0C3430 36.81%, #0B3D37 50.39%, #0A4741 67.37%, #094740 83.59%, #095C53 99.81%);
+  border-radius: 15px;
+  padding: 30px;
+  text-align: center;
+  max-width: 400px;
+  width: 90%;
+}
+
+.login-prompt h3 {
+  color: white;
+  font-size: 24px;
+  margin-bottom: 15px;
+}
+
+.login-prompt p {
+  color: rgba(255, 255, 255, 0.8);
+  margin-bottom: 25px;
+  font-size: 16px;
+}
+
+.login-prompt-buttons {
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+}
+
+.login-btn {
+  background: #00766A;
+  color: white;
+  border: none;
+  padding: 12px 24px;
+  border-radius: 8px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.login-btn:hover {
+  background: #005a52;
+}
+
+.cancel-btn {
+  background: transparent;
+  color: white;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  padding: 12px 24px;
+  border-radius: 8px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: border-color 0.3s ease;
+}
+
+.cancel-btn:hover {
+  border-color: rgba(255, 255, 255, 0.6);
+}

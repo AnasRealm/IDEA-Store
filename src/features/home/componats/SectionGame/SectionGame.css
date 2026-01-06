@@ -1,0 +1,112 @@
+.section-game {
+    background-color: rgb(10, 71, 64);
+    padding: 80px 20px;
+    min-height: 600px;
+    display: flex;
+    align-items: center;
+}
+
+.SectionGame-container {
+    max-width: 1400px;
+    margin: 0 auto;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    border-radius: 20px;
+    padding:50px;
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+}
+
+.game-content {
+    display: flex;
+    align-items: center;
+    margin: 0 auto;
+}
+
+.game-image {
+    flex: 1;
+    width: 700px;
+    height: 440px;
+    position: relative;
+    
+}
+
+.game-image img {
+    width: 120%;
+    height: auto;
+    object-fit: cover;
+    position: absolute;
+    left: -62px;
+    top: 0;
+}
+
+.game-text {
+    flex: 1;
+    color: white;
+    position: relative;
+    right: -90px;
+    top: 0;
+}
+
+.game-text h2 {
+    font-family: Lato;
+    font-weight: 700;
+    font-style: Bold;
+    font-size: 48px;
+    line-height: 117%;
+    letter-spacing: -0.5%;
+    vertical-align: middle;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+}
+
+.game-text p {
+    font-family: Lato;
+    font-weight: 400;
+    font-style: Regular;
+    font-size: 16px;
+    line-height: 185%;
+    letter-spacing: 4%;
+    vertical-align: middle;
+    width: 463px;
+    margin-bottom: 20px;
+}
+
+.explore-btn {
+    background-color: #0E8679;
+    color: white;
+    border: none;
+    padding: 15px 35px;
+    font-size: 1rem;
+    font-weight: bold;
+    border-radius: 8px;
+    cursor: pointer;
+    text-transform: uppercase;
+    transition: all 0.3s ease;
+    width: 232px;
+    height: 74px;
+}
+
+.explore-btn:hover {
+    background-color: #00b894;
+    transform: translateY(-2px);
+}
+
+@media (max-width: 768px) {
+    .game-content {
+        flex-direction: column;
+        text-align: center;
+        gap: 40px;
+    }
+
+    .game-text h2 {
+        font-size: 2.5rem;
+    }
+
+    .container {
+        padding: 40px 20px;
+    }
+}

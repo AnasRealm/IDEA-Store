@@ -1,0 +1,89 @@
+.our-purpose {
+    background: #0C3235;
+    padding: 3rem 0;
+}
+
+.purpose-container {
+    max-width: 1500px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2rem;
+    padding: 0 2rem;
+    align-items: center;
+}
+
+.purpose-item {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    color: white;
+    position: relative;
+}
+
+.purpose-item:not(:last-child)::after {
+    content: '';
+    position: absolute;
+    right: 2rem;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 1px;
+    height: 70px;
+    background: rgba(255, 255, 255, 0.2);
+}
+
+.purpose-icon {
+    flex-shrink: 0;
+}
+
+.purpose-content h3 {
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin-bottom: 0.25rem;
+}
+
+.purpose-content p {
+    font-size: 0.9rem;
+    opacity: 0.8;
+}
+
+.trustpilot {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+    color: white;
+}
+
+.trustpilot-logo img {
+    margin-right: 70px;
+}
+
+.trustpilot-stars {
+    display: flex;
+    gap: 2px;
+}
+
+.star {
+    color: #00D4AA;
+    font-size: 1.2rem;
+}
+
+.trustpilot-score {
+    font-size: 11px;
+    text-align: center;
+    color: white;
+    opacity: 0.8;
+}
+
+@media (max-width: 768px) {
+    .purpose-container {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+
+    .purpose-item {
+        justify-content: center;
+        text-align: center;
+    }
+}

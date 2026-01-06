@@ -1,0 +1,86 @@
+.profile {
+  min-height: 100vh;
+  background: linear-gradient(139.98deg, #003E38 10.69%, #003E38 20.26%, #014E46 30.76%, #00766A 40.02%, rgba(0, 78, 70, 0.941257) 54.12%, rgba(3, 81, 73, 0.952228) 55.88%, rgba(0, 62, 56, 0.983651) 78.08%, #002924 83.04%);
+  padding: 80px 20px;
+}
+
+.profile__container {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.profile__section {
+  margin-bottom: 50px;
+  margin-top: 50px;
+}
+
+.profile__title {
+  color: white;
+  font-size: 28px;
+  font-weight: 600;
+  margin-bottom: 30px;
+  font-family: Lato;
+}
+
+.profile__field {
+  margin-bottom: 25px;
+}
+
+.profile__field label {
+  display: block;
+  color: white;
+  font-size: 16px;
+  margin-bottom: 8px;
+  font-family: Lato;
+  font-weight: 500;
+}
+
+.profile__field input {
+  width: 100%;
+  padding: 15px;
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 8px;
+  color: white;
+  font-size: 16px;
+  font-family: Lato;
+  box-sizing: border-box;
+}
+
+.profile__field input::placeholder {
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.profile__field input:focus {
+  outline: none;
+  border-color: #00766A;
+  background: rgba(255, 255, 255, 0.15);
+}
+
+.profile__save-btn {
+  width: 100%;
+  padding: 15px;
+  background: #00766A;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 18px;
+  font-weight: 600;
+  font-family: Lato;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.profile__save-btn:hover {
+  background: #005a52;
+}
+
+@media (max-width: 768px) {
+  .profile {
+    padding: 40px 15px;
+  }
+  
+  .profile__title {
+    font-size: 24px;
+  }
+}
