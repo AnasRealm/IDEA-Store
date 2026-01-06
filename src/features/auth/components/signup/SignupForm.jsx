@@ -11,7 +11,7 @@ const Signup = () => {
         <div className="auth-sidebar">
           <div className="auth-logo">
             <Link to="/">
-              <img src="/public/imges/logo.png" alt="logo" />
+              <img src="/imges/logo.png" alt="logo" />
             </Link>
           </div>
           <div className="auth-welcome-text">
@@ -50,8 +50,8 @@ const Signup = () => {
                       className="eye-img"
                       src={
                         showPassword
-                          ? "/public/imges/eye.png"
-                          : "/public/imges/eye.png"
+                          ? "/imges/eye.png"
+                          : "/imges/eye.png"
                       }
                       alt="toggle password visibility"
                     />
@@ -64,7 +64,7 @@ const Signup = () => {
               </button>
 
               <button type="button" className="btn-google-login">
-                <img src="/public/imges/Google - Original.png" alt="Google" />
+                <img src="/imges/Google - Original.png" alt="Google" />
                 Continue with Google
               </button>
             </form>
