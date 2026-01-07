@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import { useState } from "react";
-import "./LoginForm.css";
+import "./auth.css";
 
 const LoginForm = () => {
   const [showPassword, setShowPassword] = useState(false);

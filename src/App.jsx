@@ -19,8 +19,8 @@ function App() {
         <Route path="/games" element={<Layout><GamesPage /></Layout>} />
         <Route path="/wallet" element={<Layout><Wallet /></Layout>} />
         <Route path="/profile" element={<Layout><Profile /></Layout>} />
-        <Route path="/login" element={<FooterOnlyLayout><LoginForm /></FooterOnlyLayout>} />
-        <Route path="/signup" element={<FooterOnlyLayout><Signup /></FooterOnlyLayout>} />
+        <Route path="/login" element={<><LoginForm /></>} />
+        <Route path="/signup" element={<><Signup /></>} />
       </Routes>
     </AuthProvider>
   );

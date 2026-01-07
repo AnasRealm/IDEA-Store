@@ -50,6 +50,7 @@
     gap: 30px;
     max-width: 1400px;
     margin: 0 auto;
+    justify-items: center;
 }
 
 .feature-card {
@@ -62,7 +63,8 @@
     transition: all 0.3s ease;
     position: relative;
     overflow: hidden;
-    width: 300px;
+    width: 100%;
+    max-width: 300px;
     height: 245px;
     box-shadow: 0px 1px 2px 0px #0000000D;
     backdrop-filter: blur(4px);

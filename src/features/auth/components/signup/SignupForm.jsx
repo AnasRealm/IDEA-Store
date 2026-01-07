@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import { useState } from "react";
-import "./SignupForm.css";
+import "../login/auth.css";
 
 const Signup = () => {
   const [showPassword, setShowPassword] = useState(false);
@@ -29,6 +29,23 @@ const Signup = () => {
             <h2>Create an account</h2>
 
             <form onSubmit={(e) => e.preventDefault()}>
+              <div className="name-fields">
+                <div className="input-field">
+                  <label>First Name</label>
+                  <input type="text" placeholder="Ahmad" />
+                </div>
+                
+                <div className="input-field">
+                  <label>Last Name</label>
+                  <input type="text" placeholder="Alshra" />
+                </div>
+              </div>
+              
+              <div className="input-field">
+                <label>Username</label>
+                <input type="text" placeholder="ahmad_alshra" />
+              </div>
+
               <div className="input-field">
                 <label>Email</label>
                 <input type="email" placeholder="balamba@gmail.com" />

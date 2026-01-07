@@ -12,37 +12,35 @@ const Footer = () => {
               <img src="/imges/logo.png" alt="" />
             </Link>
             <p className="footer-description">
-              Lorem Ipsum is simply dummy text of the printing and typesetting
-              industry.
+              Your trusted partner for instant digital top-ups, gaming cards, and online services. Fast, secure, and reliable.
             </p>
-            <p className="footer-email">@Lorem</p>
+            <p className="footer-email">support@ideastore.com</p>
           </div>
 
           <div className="footer-section">
-            <h4>About us</h4>
+            <h4>Services</h4>
             <ul>
               <li>
-                <Link to="#zeux">Zeux</Link>
+                <Link to="/games">Gaming Cards</Link>
               </li>
               <li>
-                <Link to="#portfolio">Portfolio</Link>
+                <Link to="/digital-cards">Digital Cards</Link>
               </li>
               <li>
-                <Link to="#careers">Careers</Link>
+                <Link to="/subscriptions">Subscriptions</Link>
               </li>
               <li>
-                <Link to="#contact">Contact us</Link>
+                <Link to="/support">Customer Support</Link>
               </li>
             </ul>
           </div>
 
           <div className="footer-section">
-            <h4>Contact us</h4>
+            <h4>Support</h4>
             <p className="footer-contact-text">
-              Lorem Ipsum is simply dummy text of the printing and typesetting
-              industry.
+              24/7 customer support via WhatsApp. Get instant help with your orders and account.
             </p>
-            <p className="footer-phone">+963930105556</p>
+            <p className="footer-phone">+963 930 105 556</p>
           </div>
 
           <div className="footer-section social-section">
@@ -80,7 +78,7 @@ const Footer = () => {
         </div>
 
         <div className="footer-bottom">
-          <p>Copyright © 2022 prodesigner All rights Reserved</p>
+          <p>Copyright © 2024 IDEA Store. All rights reserved. | Instant Digital Solutions</p>
         </div>
       </div>
     </footer>

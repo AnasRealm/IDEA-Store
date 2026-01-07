@@ -12,7 +12,7 @@ const Hero = () => {
   return (
     <>
       <section className="hero">
-        <Navbar />
+        
         <div className="hero-container">
           <div className="hero-content">
             <h1 className="hero-title">
@@ -36,7 +36,6 @@ const Hero = () => {
           </div>
         </div>
       </section>
-      <OurPurpose />
     </>
   );
 };
