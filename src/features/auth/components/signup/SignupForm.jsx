@@ -1,9 +1,17 @@
 import { Link } from "react-router-dom";
-import { useState } from "react";
+import { useSignup } from "../../hooks/useSignup";
 import "../login/auth.css";
 
 const Signup = () => {
-  const [showPassword, setShowPassword] = useState(false);
+  const {
+    formData,
+    isLoading,
+    showPassword,
+    handleChange,
+    handleSubmit,
+    handleGoogleLogin,
+    togglePasswordVisibility,
+  } = useSignup();
 
   return (
     <div className="auth-wrapper">
@@ -28,27 +36,55 @@ const Signup = () => {
           <div className="auth-form-box">
             <h2>Create an account</h2>
 
-            <form onSubmit={(e) => e.preventDefault()}>
+            <form onSubmit={handleSubmit}>
               <div className="name-fields">
                 <div className="input-field">
                   <label>First Name</label>
-                  <input type="text" placeholder="Ahmad" />
+                  <input
+                    type="text"
+                    name="firstName"
+                    placeholder="Ahmad"
+                    value={formData.firstName}
+                    onChange={handleChange}
+                    required
+                  />
                 </div>
-                
+
                 <div className="input-field">
                   <label>Last Name</label>
-                  <input type="text" placeholder="Alshra" />
+                  <input
+                    type="text"
+                    name="lastName"
+                    placeholder="Alshra"
+                    value={formData.lastName}
+                    onChange={handleChange}
+                    required
+                  />
                 </div>
               </div>
-              
+
               <div className="input-field">
                 <label>Username</label>
-                <input type="text" placeholder="ahmad_alshra" />
+                <input
+                  type="text"
+                  name="username"
+                  placeholder="ahmad_alshra"
+                  value={formData.username}
+                  onChange={handleChange}
+                  required
+                />
               </div>
 
               <div className="input-field">
                 <label>Email</label>
-                <input type="email" placeholder="balamba@gmail.com" />
+                <input
+                  type="email"
+                  name="email"
+                  placeholder="balamba@gmail.com"
+                  value={formData.email}
+                  onChange={handleChange}
+                  required
+                />
               </div>
 
               <div className="input-field">
@@ -56,31 +92,35 @@ const Signup = () => {
                 <div className="password-input-container">
                   <input
                     type={showPassword ? "text" : "password"}
+                    name="password"
                     placeholder="Enter Your Password"
+                    value={formData.password}
+                    onChange={handleChange}
+                    required
+                    minLength={6}
                   />
                   <i
                     className="eye-icon"
-                    onClick={() => setShowPassword(!showPassword)}
+                    onClick={togglePasswordVisibility}
                     style={{ cursor: "pointer" }}
                   >
                     <img
                       className="eye-img"
-                      src={
-                        showPassword
-                          ? "/imges/eye.png"
-                          : "/imges/eye.png"
-                      }
+                      src="/imges/eye.png"
                       alt="toggle password visibility"
                     />
                   </i>
                 </div>
               </div>
-
-              <button type="submit" className="btn-submit">
-                Create account
+              <button type="submit" className="btn-submit" disabled={isLoading}>
+                {isLoading ? "Creating..." : "Create account"}
               </button>
 
-              <button type="button" className="btn-google-login">
+              <button
+                type="button"
+                className="btn-google-login"
+                onClick={handleGoogleLogin}
+              >
                 <img src="/imges/Google - Original.png" alt="Google" />
                 Continue with Google
               </button>

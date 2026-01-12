@@ -1,6 +1,16 @@
 .games-page {
   padding: 80px 0;
-  background: linear-gradient(139.98deg, #003E38 10.69%, #003E38 20.26%, #014E46 30.76%, #00766A 40.02%, rgba(0, 78, 70, 0.941257) 54.12%, rgba(3, 81, 73, 0.952228) 55.88%, rgba(0, 62, 56, 0.983651) 78.08%, #002924 83.04%);
+  background: linear-gradient(
+    139.98deg,
+    #003e38 10.69%,
+    #003e38 20.26%,
+    #014e46 30.76%,
+    #00766a 40.02%,
+    rgba(0, 78, 70, 0.941257) 54.12%,
+    rgba(3, 81, 73, 0.952228) 55.88%,
+    rgba(0, 62, 56, 0.983651) 78.08%,
+    #002924 83.04%
+  );
   min-height: 100vh;
 }
 
@@ -28,7 +38,7 @@
 }
 
 .search-input:focus {
-  border-color: #00766A;
+  border-color: #00766a;
 }
 
 .trading-games-section,
@@ -103,12 +113,12 @@
   line-height: 111%;
   letter-spacing: 3.5%;
   text-transform: capitalize;
-  color: #FFFFFF99;
+  color: #ffffff99;
   margin-bottom: 15px;
 }
 
 .game-card__price {
-  color: #FFDD15;
+  color: #ffdd15;
   padding: 8px 16px;
   border-radius: 20px;
   font-weight: bold;
@@ -144,7 +154,15 @@
 }
 
 .popup {
-  background: linear-gradient(180.22deg, #063833 21.34%, #0C3430 36.81%, #0B3D37 50.39%, #0A4741 67.37%, #094740 83.59%, #095C53 99.81%);
+  background: linear-gradient(
+    180.22deg,
+    #063833 21.34%,
+    #0c3430 36.81%,
+    #0b3d37 50.39%,
+    #0a4741 67.37%,
+    #094740 83.59%,
+    #095c53 99.81%
+  );
 
   border-radius: 20px;
   width: 500px;
@@ -212,7 +230,7 @@
 
 .popup__input:focus {
   outline: none;
-  border-color: #00766A;
+  border-color: #00766a;
 }
 
 .popup__total {
@@ -230,7 +248,7 @@
 }
 
 .popup__price {
-  color: #FFDD15;
+  color: #ffdd15;
   font-size: 20px;
   font-weight: bold;
 }
@@ -238,7 +256,7 @@
 .popup__buy-btn {
   width: 100%;
   padding: 15px;
-  background: #00766A;
+  background: #00766a;
   color: white;
   border: none;
   border-radius: 10px;
@@ -266,7 +284,15 @@
 }
 
 .login-prompt {
-  background: linear-gradient(180.22deg, #063833 21.34%, #0C3430 36.81%, #0B3D37 50.39%, #0A4741 67.37%, #094740 83.59%, #095C53 99.81%);
+  background: linear-gradient(
+    180.22deg,
+    #063833 21.34%,
+    #0c3430 36.81%,
+    #0b3d37 50.39%,
+    #0a4741 67.37%,
+    #094740 83.59%,
+    #095c53 99.81%
+  );
   border-radius: 15px;
   padding: 30px;
   text-align: center;
@@ -293,7 +319,7 @@
 }
 
 .login-btn {
-  background: #00766A;
+  background: #00766a;
   color: white;
   border: none;
   padding: 12px 24px;
@@ -320,4 +346,63 @@
 
 .cancel-btn:hover {
   border-color: rgba(255, 255, 255, 0.6);
+}
+
+.suggestions-dropdown {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  background: rgba(13, 36, 34, 0.95);
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 0 0 15px 15px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+  z-index: 100;
+  max-height: 300px;
+  overflow-y: auto;
+  margin-top: 5px;
+}
+
+.suggestion-item {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  padding: 15px 20px;
+  cursor: pointer;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+  transition: background 0.2s ease;
+}
+
+.suggestion-item:last-child {
+  border-bottom: none;
+}
+
+.suggestion-item:hover {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.suggestion-icon {
+  font-size: 1.2rem;
+  opacity: 0.7;
+}
+
+.suggestion-text {
+  color: white;
+  font-family: "Lato", sans-serif;
+  font-size: 14px;
+}
+
+.suggestions-dropdown::-webkit-scrollbar {
+  width: 6px;
+}
+
+.suggestions-dropdown::-webkit-scrollbar-track {
+  background: rgba(0, 0, 0, 0.1);
+}
+
+.suggestions-dropdown::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 3px;
 }

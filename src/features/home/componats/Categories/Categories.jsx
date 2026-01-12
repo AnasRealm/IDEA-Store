@@ -1,68 +1,68 @@
-import './Categories.css';
-import { useNavigate } from 'react-router-dom';
-
+import "./Categories.css";
+import { useCategories } from "../../hooks/useCategories";
 const Categories = () => {
-  const navigate = useNavigate();
+const {
+    categories,
+    isLoading,
+    isError,
+    getCategoryImage,
+    handleCategoryClick,
+  } = useCategories();
 
-  const categories = [
-    {
-      id: 1,
-      title: 'Games',
-      image: '/imges/games.png',
-      path: '/games'
-    },
-    {
-      id: 2,
-      title: 'Digital Cards',
-      image: '/imges/Digital cards.png'
-    },
-    {
-      id: 3,
-      title: 'Account',
-      image: '/imges/account.png'
-    },
-    {
-      id: 4,
-      title: 'Subscriptions',
-      image: '/imges/Subscriptions.png'
-    },
-    {
-      id: 5,
-      title: 'Electronic Payment',
-      image: '/imges/Electronic payment.png'
-    },
-    {
-      id: 6,
-      title: 'Chat Applications',
-      image: '/imges/Chat applications.png'
-    }
-  ];
+  if (isLoading) {
+    return (
+      <section className="categories">
+        <div
+          className="container"
+          style={{ textAlign: "center", color: "white", padding: "40px" }}
+        >
+          <p>Loading Categories...</p>
+        </div>
+      </section>
+    );
+  }
 
-  const handleCategoryClick = (category) => {
-    if (category.path) {
-      navigate(category.path);
-    }
-  };
+  if (isError) {
+    return (
+      <section className="categories">
+        <div
+          className="container"
+          style={{ textAlign: "center", color: "#ff6b6b", padding: "40px" }}
+        >
+          <p>Failed to load categories. Please try again later.</p>
+        </div>
+      </section>
+    );
+  }
 
   return (
     <section className="categories">
       <div className="container">
         <h2 className="categories-title">CATEGORIES</h2>
-        <div className="categories-grid">
-          {categories.map(category => (
-            <div 
-              key={category.id} 
-              className="category-card"
-              onClick={() => handleCategoryClick(category)}
-              style={{ cursor: category.path ? 'pointer' : 'default' }}
-            >
-              <div className="category-image">
-                <img src={category.image} alt={category.title} />
+
+        {categories.length === 0 ? (
+          <p style={{ textAlign: "center", color: "rgba(255,255,255,0.7)" }}>
+            No categories available yet.
+          </p>
+        ) : (
+          <div className="categories-grid">
+            {categories.map((category) => (
+              <div
+                key={category.id}
+                className="category-card"
+                onClick={() => handleCategoryClick(category)}
+              >
+                <div className="category-image">
+                  <img
+                    src={getCategoryImage(category.name)}
+                    alt={category.name}
+                  />
+                </div>
+                <h3 className="category-title">{category.name}</h3>
               </div>
-              <h3 className="category-title">{category.title}</h3>
-            </div>
-          ))}
-        </div>
+            ))}
+          </div>
+        )}
       </div>
     </section>
   );
